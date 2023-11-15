@@ -29,9 +29,17 @@ public class Player : MonoBehaviour
         {
             transform.position += Vector3.right * Time.deltaTime * speed;
         }
-        if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) && ground)
+        if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) && ground)
         {
             rb.AddForce(Vector3.up * jump, ForceMode.Impulse);
+        }
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            transform.position += Vector3.forward * Time.deltaTime * speed;
+        }
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        {
+            transform.position += Vector3.back * Time.deltaTime * speed;
         }
     }
     private void OnCollisionEnter(Collision collision)
