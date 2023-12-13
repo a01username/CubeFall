@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     //Add Variables here
-    float jump = 1.0f;
+    float jump = 2.0f;
     float speed = 10.0f;
     bool ground = true;
     Rigidbody rb;
