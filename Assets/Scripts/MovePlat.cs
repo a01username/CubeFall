@@ -11,13 +11,16 @@ public class MovePlat : MonoBehaviour
     public GameObject player;
     void Update()
     {
-        if (FollowPlayer)
+        if(player != null)
         {
-            FollowThePlayer();
-        }
-        else
-        {
-            MovePlatform();
+            if (FollowPlayer)
+            {
+                FollowThePlayer();
+            }
+            else
+            {
+                MovePlatform();
+            }
         }
     }
     void MovePlatform()
